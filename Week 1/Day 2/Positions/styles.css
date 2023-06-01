@@ -1,0 +1,39 @@
+.box {
+    padding: 25px;
+    color: white;
+    background-color: black;
+    border: 1px solid yellow;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box-2{
+    padding: 25px;
+    background-color: red;
+    max-width: 250px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.absolute{
+    position: absolute;
+    top: 25px;
+    left: 45%
+}
+
+.fixed{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+}
+
+.relative{
+    position: relative;
+    top: 50px
+}

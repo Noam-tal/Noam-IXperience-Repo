@@ -1,0 +1,71 @@
+.spin-box{
+width: 250px;
+height: 250px;
+background-color: blue;
+display: flex;
+justify-content: center;
+align-items: center;
+animation-name: spin;
+animation-duration: 5s;
+animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+animation-iteration-count: infinite;
+
+
+}
+
+@keyframes spin{
+
+    from {transform: rotate(0deg);
+
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.translation-box{
+    width: 250px;
+    height: 250px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move{
+    0% {
+        transform: translate(0px, 0px);
+        background-color: green;
+    }
+
+    25% {  
+        transform: translate(0px, 300px);
+        background-color: yellow;
+        
+    }
+
+    50% {  
+
+        transform: translate(300px, 300px);
+        background-color: blue;
+        
+    }
+
+    75% {  
+
+        transform: translate(300px, 0px);
+        background-color: gray;
+        
+    }
+    100%
+    {  
+
+        transform: translate(0px, 0px);
+        background-color: green;
+        
+    }
+}
