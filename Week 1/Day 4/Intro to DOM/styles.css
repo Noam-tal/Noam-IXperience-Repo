@@ -1,0 +1,8 @@
+.custom-div{
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 18px;
+background-color: yellow;
+}
+
