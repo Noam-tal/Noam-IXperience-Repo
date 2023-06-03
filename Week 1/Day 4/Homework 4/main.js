@@ -11,35 +11,37 @@ const movies = [
     {title: 'Peter Pan', explanation: 'In this movie some kids die and an angel escorts them to heaven...', hint: 'Always flying, cuz he neverlands'},
     {title: 'The Lord Of The Rings', explanation: 'In this movie some small guys go for a walk...', hint: 'You will not vacate past this exact position'}
 ]
-console.log(movies[0].title)
+let movieIndex = 0
  
-const desc = document.getElementById("descriptions")
-const guess = document.getElementById("guess-form")
-const hint = document.getElementById("hint-des")
-const wrong = document.getElementById('wrong')
+const desc = document.getElementById("descriptions");
+const guess = document.getElementById("guess-form");
+const hint = document.getElementById("hint-des");
+const wrong = document.getElementById('wrong');
 
-for (let i=0; i<movies.length; i++){
+
+    desc.innerHTML = movies[movieIndex].explanation
     
-    console.log(movies[i].title)
 
     function makeGuess(){
-        if (guess.value == movies[i].title) {
-            console.log("You Got It!");
-            hint.textContent = ""
+        if (guess.value.toLowerCase() == movies[movieIndex].title.toLowerCase()) {
+            hint.textContent = "";
+            wrong.innerHTML = '';
+            movieIndex++;
+            desc.innerHTML = movies[movieIndex].explanation;
+            hint.innerHTML = ' '
         }
         else {
-            console.log("Sorry, try again");
-            wrong.textContent=='Sorry, try again'
-            return
+            wrong.innerHTML = 'Sorry, Try Again'
+            
            
         }
 
         guess.value = ""
     }
-        }
+        
         
         function showHint(){
-
+                hint.innerHTML = movies[movieIndex].hint
 
         }
             
