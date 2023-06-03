@@ -12,3 +12,8 @@ else {
 guess.value = ""
 }
 
+
+
+const hint = document.getElementById("hint-des")
+
+
