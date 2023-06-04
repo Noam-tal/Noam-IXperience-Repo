@@ -65,7 +65,7 @@ class Task {
   
       tdTask.innerHTML = task.taskName;
 
-      tdCompleted.appendChild(checkbox)
+      
 
     
       const actionButtons = this.createActionButtons(task);
@@ -80,13 +80,15 @@ class Task {
       tr.appendChild(tdCompleted);
   
       const checkBox = this.createCheckBox();
-      tdCompleted.appendChild(checkBox)
+      tdCompleted.appendChild(checkBox);
+
       return tr;
     }
   
     createCheckBox(){
         const checkElement = document.createElement('input')
-        checkElement.type = 'checkbox';
+        checkElement.setAttribute('type','checkbox')
+       
         return [checkElement]
     }
 
