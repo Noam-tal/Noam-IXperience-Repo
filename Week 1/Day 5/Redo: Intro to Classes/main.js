@@ -83,3 +83,45 @@ let customers = [];
 customers.push(Big);
 customers.push(Beetroot);
 console.log(customers)
+
+class UI{
+    constructor(){
+        this.tableBody = document.getElementById('table-body')
+    }
+    
+    renderCustomers(){
+        this.tableBody.innerHTML = [];
+        for (let i = 0; i<customers.length; i++){
+          const tr = document.createElement('tr')  
+          let firstName = document.createElement('td')
+          let lastName = document.createElement('td')
+          let age = document.createElement('td')
+          let address = document.createElement('td')
+          let phoneNumber = document.createElement('td')
+          let dob = document.createElement('td')
+          let membershipType = document.createElement('td')
+
+
+          firstName.innerHTML = customers[i].firstName
+          lastName.innerHTML = customers[i].lastName
+          age.innerHTML = customers[i].age
+          address.innerHTML = customers[i].address
+          phoneNumber.innerHTML = customers[i].phoneNumber
+          dob.innerHTML = customers[i].dob
+          membershipType.innerHTML = customers[i].membershipType
+
+          tr.appendChild(firstName);
+          tr.appendChild(lastName);
+          tr.appendChild(age);
+          tr.appendChild(address);
+          tr.appendChild(phoneNumber);
+          tr.appendChild(dob);
+          tr.appendChild(membershipType);
+
+          this.tableBody.appendChild(tr)
+        }
+    }
+}
+
+const ui = new UI()
+ui.renderCustomers()
